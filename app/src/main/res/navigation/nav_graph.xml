@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/all">
+
+    <fragment
+        android:id="@+id/all"
+        android:name="com.example.to_dolist.ui.All"
+        android:label="🚀 Todas"
+        tools:layout="@layout/fragment_all" />
+    <fragment
+        android:id="@+id/work"
+        android:name="com.example.to_dolist.ui.Work"
+        android:label="💼 Trabajo"
+        tools:layout="@layout/fragment_work" />
+    <fragment
+        android:id="@+id/personnel"
+        android:name="com.example.to_dolist.ui.Personnel"
+        android:label="🛸 Personal"
+        tools:layout="@layout/fragment_personnel" />
+    <fragment
+        android:id="@+id/studies"
+        android:name="com.example.to_dolist.ui.Studies"
+        android:label="🗃️ Studios"
+        tools:layout="@layout/fragment_studies" />
+    <fragment
+        android:id="@+id/important"
+        android:name="com.example.to_dolist.ui.Important"
+        android:label="🔥 Importantes"
+        tools:layout="@layout/fragment_important" />
+</navigation>

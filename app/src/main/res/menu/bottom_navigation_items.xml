@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/all"
+        android:title="@string/all"
+        android:icon="@drawable/ic_all"/>
+
+    <item
+        android:id="@+id/work"
+        android:title="@string/work"
+        android:icon="@drawable/ic_work"/>
+
+    <item
+        android:id="@+id/personnel"
+        android:title="@string/personnel"
+        android:icon="@drawable/ic_person"/>
+
+    <item
+        android:id="@+id/studies"
+        android:title="@string/studies"
+        android:icon="@drawable/ic_studies"/>
+
+    <item
+        android:id="@+id/important"
+        android:title="@string/important"
+        android:icon="@drawable/ic_important"/>
+
+</menu>

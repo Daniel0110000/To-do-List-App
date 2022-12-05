@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">To-do List</string>
+    <string name="all">Todas</string>
+    <string name="work">Trabajo</string>
+    <string name="personnel">Personal</string>
+    <string name="studies">Estudios</string>
+    <string name="important">Importantes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Task">Tarea</string>
 </resources>
