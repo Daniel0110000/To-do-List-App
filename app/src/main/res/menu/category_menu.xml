@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/work_category"
+        android:title="@string/work"/>
+
+    <item
+        android:id="@+id/personnel_category"
+        android:title="@string/personnel"/>
+
+    <item
+        android:id="@+id/studies_category"
+        android:title="@string/studies"/>
+
+    <item
+        android:id="@+id/important_category"
+        android:title="@string/important"/>
+
+</menu>

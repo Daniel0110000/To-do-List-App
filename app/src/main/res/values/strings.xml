@@ -8,4 +8,19 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Task">Tarea</string>
+    <string name="delete">Borrar</string>
+    <string name="update">Actualizar</string>
+    <string name="share">Compartir</string>
+    <string name="history">Historial</string>
+    <string name="dark">Oscuro</string>
+    <string name="claro">Claro</string>
+    <string name="today_tasks">Tareas de hoy</string>
+    <string name="chnage_theme">Cambiar de tema</string>
+    <string name="menu_more_options">menu more options</string>
+    <string name="close_task_layout">close task layout</string>
+    <string name="open_calendar">open calendar</string>
+    <string name="select_category">select category</string>
+    <string name="save_task">save task</string>
+    <string name="add_new_task">add new task</string>
+    <string name="completed_task">completed task</string>
 </resources>
