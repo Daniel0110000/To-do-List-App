@@ -11,7 +11,7 @@ class TaskRepository
     @Inject
     constructor(
         private val taskDao: TaskDao,
-        private val taskHistoryDao: TaskHistoryDao
+        private val taskHistoryDao: TaskHistoryDao,
     ){
 
     val allTasks: LiveData<List<Task>> = taskDao.getAllTasks()

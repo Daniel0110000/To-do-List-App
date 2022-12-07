@@ -39,7 +39,8 @@ class Studies : Fragment() {
                     binding.recyclerStudies,
                     task,
                     it,
-                    viewModel
+                    viewModel,
+                    binding.noTasksToPerformLayout
                 )
             }!!
             recyclerViewIns.initRecyclerView()

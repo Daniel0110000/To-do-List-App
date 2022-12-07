@@ -9,6 +9,8 @@ import com.example.to_dolist.data.room.TaskHistory
 import com.example.to_dolist.repository.TaskRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
@@ -60,13 +62,13 @@ class TaskViewModel
                         }
                     }
                 }else{
-                    errorDescription.value = "Selecciona una categoría."
+                    errorDescription.value = "\uD83D\uDCCB Por favor selecciona una categoría."
                 }
             }else{
-                errorDescription.value = "Selecciona una fecha."
+                errorDescription.value = "\uD83D\uDD2E Por favor selecciona una fecha."
             }
         }else{
-            errorDescription.value = "Escribe una tarea."
+            errorDescription.value = "\uD83D\uDCD6 Por favor escriba una tarea."
         }
     }
 

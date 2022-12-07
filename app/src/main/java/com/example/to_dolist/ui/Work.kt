@@ -39,7 +39,8 @@ class Work : Fragment() {
                     binding.recyclerWork,
                     task,
                     it,
-                    viewModel
+                    viewModel,
+                    binding.noTasksToPerformLayout
                 )
             }!!
             recyclerViewIns.initRecyclerView()

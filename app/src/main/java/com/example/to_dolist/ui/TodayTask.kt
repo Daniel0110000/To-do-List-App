@@ -3,6 +3,7 @@ package com.example.to_dolist.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import com.blogspot.atifsoftwares.animatoolib.Animatoo
 import com.example.to_dolist.databinding.ActivityTodayTaskBinding
 import com.example.to_dolist.ui.common.RecyclerViewIns
 import com.example.to_dolist.viewModel.TaskViewModel
@@ -28,6 +29,7 @@ class TodayTask : AppCompatActivity() {
 
         binding.backLayout.setOnClickListener {
             onBackPressed()
+            Animatoo.animateSlideRight(this)
         }
     }
 
@@ -37,7 +39,8 @@ class TodayTask : AppCompatActivity() {
                 binding.recyclerTodayTask,
                 task,
                 this,
-                viewModel
+                viewModel,
+                binding.noTasksToPerformLayout
             )
             recyclerViewIns.initRecyclerView()
         }

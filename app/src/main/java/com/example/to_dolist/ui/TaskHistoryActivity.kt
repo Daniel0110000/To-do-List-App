@@ -2,8 +2,10 @@ package com.example.to_dolist.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.blogspot.atifsoftwares.animatoolib.Animatoo
 import com.example.to_dolist.adapter.RecyclerTaskHistoryAdapter
 import com.example.to_dolist.data.room.TaskHistory
 import com.example.to_dolist.databinding.ActivityTaskHistoryBinding
@@ -26,6 +28,7 @@ class TaskHistoryActivity : AppCompatActivity() {
 
         binding.backLayout.setOnClickListener {
             onBackPressed()
+            Animatoo.animateSlideRight(this)
         }
 
         binding.deleteAll.setOnClickListener {
@@ -41,8 +44,15 @@ class TaskHistoryActivity : AppCompatActivity() {
     }
 
     private fun initRecyclerView(taskHistory: List<TaskHistory>){
-        binding.recyclerTaskHistory.hasFixedSize()
-        binding.recyclerTaskHistory.layoutManager = LinearLayoutManager(this)
-        binding.recyclerTaskHistory.adapter = RecyclerTaskHistoryAdapter(taskHistory)
+        if(taskHistory.isEmpty()){
+            binding.noHistoryOfCompletedTasksLayout.visibility = View.VISIBLE
+            binding.recyclerTaskHistory.visibility = View.GONE
+        }else{
+            binding.noHistoryOfCompletedTasksLayout.visibility = View.GONE
+            binding.recyclerTaskHistory.visibility = View.VISIBLE
+            binding.recyclerTaskHistory.hasFixedSize()
+            binding.recyclerTaskHistory.layoutManager = LinearLayoutManager(this)
+            binding.recyclerTaskHistory.adapter = RecyclerTaskHistoryAdapter(taskHistory)
+        }
     }
 }

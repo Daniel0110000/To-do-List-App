@@ -39,7 +39,8 @@ class Personnel : Fragment() {
                     binding.recyclerPersonnel,
                     task,
                     it,
-                    viewModel
+                    viewModel,
+                    binding.noTasksToPerformLayout
                 )
             }!!
             recyclerViewIns.initRecyclerView()

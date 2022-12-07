@@ -39,7 +39,8 @@ class Important : Fragment() {
                     binding.recyclerImportant,
                     task,
                     it,
-                    viewModel
+                    viewModel,
+                    binding.noTasksToPerformLayout
                 )
             }!!
             recyclerViewIns.initRecyclerView()

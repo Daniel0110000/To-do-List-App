@@ -32,12 +32,13 @@
                 android:layout_margin="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:contentDescription="@string/back_layout" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="⏱️ Historial de tareas"
+                android:text="@string/task_history"
                 android:textSize="20sp"
                 android:textStyle="normal|bold"
                 app:layout_constraintTop_toTopOf="parent"
@@ -52,6 +53,7 @@
         android:id="@+id/recycler_task_history"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
@@ -67,5 +69,32 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_anchorGravity="bottom|right|end"/>
+
+    <LinearLayout
+        android:id="@+id/no_history_of_completed_tasks_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/no_history_of_completed_tasks"
+            android:contentDescription="@string/no_history_of_completed_tasks_image" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_history"
+            android:layout_gravity="center"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

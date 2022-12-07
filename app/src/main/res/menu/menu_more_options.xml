@@ -1,22 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
     <item
         android:id="@+id/history"
         android:title="@string/history"/>
-
-    <item
-        android:title="@string/chnage_theme">
-
-        <menu>
-            <item
-                android:id="@+id/dark"
-                android:title="@string/dark"/>
-            <item
-                android:id="@+id/light"
-                android:title="@string/claro"/>
-        </menu>
-
-    </item>
 
     <item android:id="@+id/todayTasks"
         android:title="@string/today_tasks"/>

@@ -1,6 +1,8 @@
 package com.example.to_dolist.ui.common
 
 import android.content.Context
+import android.view.View
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,13 +19,21 @@ class RecyclerViewIns
         private val recycler: RecyclerView,
         private val taskList: List<Task>,
         private val context: Context,
-        private val viewModel: TaskViewModel
+        private val viewModel: TaskViewModel,
+        private val noTasksToPerformLayout: LinearLayout
     ): TaskClickListener {
 
     fun initRecyclerView(){
+        if(taskList.isEmpty()){
+            noTasksToPerformLayout.visibility = View.VISIBLE
+            recycler.visibility = View.GONE
+        }else{
+            noTasksToPerformLayout.visibility = View.GONE
+            recycler.visibility = View.VISIBLE
             recycler.hasFixedSize()
             recycler.layoutManager = LinearLayoutManager(context)
             recycler.adapter = RecyclerTaskAdapter(taskList, this)
+        }
     }
 
     override fun onLongItemClicked(task: Task, cardView: CardView) {

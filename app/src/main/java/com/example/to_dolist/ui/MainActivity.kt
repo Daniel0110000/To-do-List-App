@@ -10,12 +10,17 @@ import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.PopupMenu
 import androidx.cardview.widget.CardView
 import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
+import com.blogspot.atifsoftwares.animatoolib.Animatoo
 import com.example.to_dolist.R
+import com.example.to_dolist.constants.ApplicationConstants.THEME_DARK
+import com.example.to_dolist.constants.ApplicationConstants.THEME_DEFAULT
+import com.example.to_dolist.constants.ApplicationConstants.THEME_LIGHT
 import com.example.to_dolist.databinding.ActivityMainBinding
 import com.example.to_dolist.viewModel.TaskViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -73,6 +78,7 @@ class MainActivity : AppCompatActivity() {
         })
 
     }
+
 
     private fun openAddTaskLayout(){
         binding.insertUpdateTaskLayout.visibility = View.VISIBLE
@@ -139,11 +145,14 @@ class MainActivity : AppCompatActivity() {
         val popup = PopupMenu(this, menu)
         popup.inflate(R.menu.menu_more_options)
         popup.setOnMenuItemClickListener {
-            if(it.title!!.contains("Tareas de hoy")){
+            val title = it.title!!
+            if(title.contains("Tareas de hoy")){
                 startActivity(Intent(this, TodayTask::class.java))
+                Animatoo.animateSlideLeft(this)
             }
-            if(it.title!!.contains("Historial")){
+            if(title.contains("Historial")){
                 startActivity(Intent(this, TaskHistoryActivity::class.java))
+                Animatoo.animateSlideLeft(this)
             }
             true
         }

@@ -17,7 +17,7 @@
             android:id="@+id/date_history"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2/12/2022"
+            tools:text="2/12/2022"
             android:textStyle="normal|bold"
             android:textSize="18sp"
             android:layout_margin="10dp"
@@ -47,7 +47,8 @@
             android:src="@drawable/ic_check_box"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/task_complete_true" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

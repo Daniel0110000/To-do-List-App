@@ -3,6 +3,7 @@ package com.example.to_dolist.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
@@ -55,6 +56,10 @@ class RecyclerTaskAdapter(private val taskList: List<Task>, val listener: TaskCl
                 taskCompleted.setImageResource(R.drawable.ic_check_box)
                 listener.onCompletedItemClicked(taskList[adapterPosition])
             }
+
+            val animation = AnimationUtils.loadAnimation(itemView.context, android.R.anim.slide_in_left)
+            itemView.animation = animation
+
 
         }
 

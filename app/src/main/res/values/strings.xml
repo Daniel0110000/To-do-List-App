@@ -10,10 +10,7 @@
     <string name="update">Actualizar</string>
     <string name="share">Compartir</string>
     <string name="history">Historial</string>
-    <string name="dark">Oscuro</string>
-    <string name="claro">Claro</string>
     <string name="today_tasks">Tareas de hoy</string>
-    <string name="chnage_theme">Cambiar de tema</string>
     <string name="menu_more_options">menu more options</string>
     <string name="close_task_layout">close task layout</string>
     <string name="open_calendar">open calendar</string>
@@ -22,4 +19,13 @@
     <string name="add_new_task">add new task</string>
     <string name="completed_task">completed task</string>
     <string name="delete_all">Eliminar todo</string>
+    <string name="defaultM">Predeterminado</string>
+    <string name="no_task_to_perform">Sin tareas que realizar</string>
+    <string name="today_task">🌃 Tareas de hoy</string>
+    <string name="back_layout">back layout</string>
+    <string name="no_task_perform_image">no task perform image</string>
+    <string name="task_complete_true">task complete true</string>
+    <string name="no_history">Sin historial</string>
+    <string name="no_history_of_completed_tasks_image">no history of completed tasks image</string>
+    <string name="task_history">⏱️ Historial de tareas</string>
 </resources>
