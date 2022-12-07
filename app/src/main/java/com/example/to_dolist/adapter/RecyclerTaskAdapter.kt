@@ -51,8 +51,9 @@ class RecyclerTaskAdapter(private val taskList: List<Task>, val listener: TaskCl
                 true
             }
 
-            taskCompleted.setOnClickListener{
+            taskCompleted.setOnClickListener {
                 taskCompleted.setImageResource(R.drawable.ic_check_box)
+                listener.onCompletedItemClicked(taskList[adapterPosition])
             }
 
         }

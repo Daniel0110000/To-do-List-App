@@ -14,7 +14,7 @@
         <item name="colorOnSecondary">@color/cinder</item>
 
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">@color/seashell</item>
 
 
     </style>

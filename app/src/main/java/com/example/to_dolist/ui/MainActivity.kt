@@ -5,10 +5,8 @@ import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Bundle
-import android.view.Menu
 import android.view.View
 import android.widget.ImageButton
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -143,6 +141,9 @@ class MainActivity : AppCompatActivity() {
         popup.setOnMenuItemClickListener {
             if(it.title!!.contains("Tareas de hoy")){
                 startActivity(Intent(this, TodayTask::class.java))
+            }
+            if(it.title!!.contains("Historial")){
+                startActivity(Intent(this, TaskHistoryActivity::class.java))
             }
             true
         }
