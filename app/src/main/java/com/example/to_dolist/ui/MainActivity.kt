@@ -1,6 +1,7 @@
 package com.example.to_dolist.ui
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Bundle
@@ -139,6 +140,12 @@ class MainActivity : AppCompatActivity() {
     private fun moreMenuOptions(menu: ImageButton){
         val popup = PopupMenu(this, menu)
         popup.inflate(R.menu.menu_more_options)
+        popup.setOnMenuItemClickListener {
+            if(it.title!!.contains("Tareas de hoy")){
+                startActivity(Intent(this, TodayTask::class.java))
+            }
+            true
+        }
         popup.show()
     }
 

@@ -68,6 +68,7 @@ class TaskViewModel
     }
 
     fun tasksByCategory(category: String): LiveData<List<Task>> = taskRepository.tasksByCategory(category)
+    fun todayTask(date: String): LiveData<List<Task>> = taskRepository.todayTask(date)
 
     fun deleteTask(task: Task) = viewModelScope.launch(Dispatchers.IO) {
         taskRepository.deleteTask(task)

@@ -19,6 +19,9 @@ interface TaskDao {
     @Query("select * from task_table where category = :category")
     fun getTasksByCategory(category: String): LiveData<List<Task>>
 
+    @Query("select * from task_table where date = :date")
+    fun getTodayTasks(date: String): LiveData<List<Task>>
+
     @Delete
     suspend fun deleteTask(task: Task)
 
